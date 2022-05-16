@@ -5,8 +5,12 @@ import os.path
 m=36.7/1000
 w=m*9.81
 i=[1,2,3,4,5]
-w_i=[0.369,0.377,0.386,0.392,0.404]
+m_i=[0.0377, 0.0385, 0.0394, 0.04, 0.0413]
+w_i=[x *9.81 for x in m_i]
 
+print('w: ',w)
+print('m: ', m)
+print('w_i: ', w_i)
 w_m=[x - w for x in w_i]
 print('W_m 1_1 : ', w_m)
 

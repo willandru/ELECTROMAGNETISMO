@@ -7,7 +7,10 @@ m=32.8/1000
 w=m*9.81
 
 i_b=[1, 1.5, 2, 2.5, 3]
-w_i=[0.323, 0.324, 0.326, 0.327, 0.328]
+
+m_i= [0.033, 0.0331, 0.0333, 0.0334, 0.0335]
+
+w_i=[x *9.81 for x in m_i]
 
 
 w_m=[x - w for x in w_i]
@@ -15,7 +18,7 @@ print('W_m 2_2 : ', w_m)
 
 plt.plot(i_b,w_m,'--', color='black')
 plt.plot(i_b,w_m,'*b')
-plt.ylabel('W_i [N]')
+plt.ylabel('W_m [N]')
 plt.xlabel('i_b [A]')
 
 plt.axes([1,5,0,0.5])
